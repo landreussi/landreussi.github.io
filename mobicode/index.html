@@ -10,7 +10,11 @@
   <link rel="shortcut icon" type="image/ico" href="img/mobicode.ico" />
   <style type="text/css">
     #multiplatform {
-      background-color: #14a509;
+      -moz-transition: all .2s ease-in;
+      -o-transition: all .2s ease-in;
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in;
+      background: #14a509;
       color: #fff;
     }
 
@@ -26,7 +30,13 @@
       font-size: 10em;
       display: block;
       margin: auto;
+      transition: all .2s ease-in-out;
     }
+
+    #multiplatform i:hover {
+      transform: scale(1.1);
+    }
+
     .centered {
       margin-top: 5em;
     }
@@ -239,16 +249,16 @@
       <p align="center">Desenvolvemos nossos aplicativos para atender qualquer plataforma</p>
       <div class="ui middle aligned stackable grid container">
         <div class="three column row">
-          <div class="column" id="android">
-            <i class="android icon"></i>
+          <div class="column">
+            <i class="android icon" id="android"></i>
             <p>Android</p>
           </div>
-          <div class="column" id="apple">
-            <i class="apple icon"></i>
+          <div class="column">
+            <i class="apple icon" id="apple"></i>
             <p>iOS</p>
           </div>
-          <div class="column" id="windows">
-            <i class="windows icon"></i>
+          <div class="column">
+            <i class="windows icon" id="windows"></i>
             <p>Windows Phone</p>
           </div>
         </div>
@@ -266,7 +276,7 @@
                 <img src="http://www.jyfconsultoria.com.br/images/datasul-partner.png">
               </div>
               <div class="content">
-                <a class="header">Datasul</a>
+                <a class="header" align="center">Datasul</a>
               </div>
             </div>
           </div>
@@ -337,14 +347,14 @@
       interval: 600
     });
   });
-  $("#android").hover(function(){
-    $("#multiplatform").css("background-color: #14a509;");
+  $("#android").hover(function() {
+    $("#multiplatform").css("background-color", "#14a509");
   });
-  $("#apple").hover(function(){
-    $("#multiplatform").css("background-color: #000;");
+  $("#apple").hover(function() {
+    $("#multiplatform").css("background-color", "#000");
   });
-  $("#windows").hover(function(){
-    $("#multiplatform").css("background-color: #120587;");
+  $("#windows").hover(function() {
+    $("#multiplatform").css("background-color", "#120587");
   });
 </script>
 
