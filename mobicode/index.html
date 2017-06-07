@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="shortcut icon" type="image/ico" href="img/mobicode.ico" />
   <style type="text/css">
-    #multiplatform {
+    #tech {
       -moz-transition: all .2s ease-in;
       -o-transition: all .2s ease-in;
       -webkit-transition: all .2s ease-in;
@@ -18,23 +18,27 @@
       color: #fff;
     }
 
-    #multiplatform .row {
+    #tech .row {
       margin-top: 100px;
     }
 
-    #multiplatform .column {
+    #tech .column {
       text-align: center;
     }
 
-    #multiplatform i {
+    #tech i {
       font-size: 10em;
       display: block;
       margin: auto;
       transition: all .2s ease-in-out;
     }
 
-    #multiplatform i:hover {
+    #tech i:hover {
       transform: scale(1.1);
+    }
+
+    .card .price {
+      font-size: 50px;
     }
 
     .centered {
@@ -168,16 +172,16 @@
 <body>
 
   <!-- Following Menu -->
-  <div class="ui large top fixed hidden menu">
+  <div class="ui large fixed hidden menu">
     <div class="ui container">
-      <a class="active item">Início</a>
-      <a class="item">O que é</a>
-      <a class="item">Tecnologia</a>
-      <a class="item">Cases</a>
-      <a class="item">Planos</a>
+      <a href="#home" class="active item">Início</a>
+      <a href="#what" class="item">O que é</a>
+      <a href="#tech" class="item">Tecnologia</a>
+      <a href="#cases" class="item">Cases</a>
+      <a href="#plans" class="item">Planos</a>
       <div class="right menu">
         <div class="item">
-          <a class="ui button">Contate-nos</a>
+          <a class="ui purple button">Contate-nos</a>
         </div>
       </div>
     </div>
@@ -185,31 +189,30 @@
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
-    <a class="active item">Início</a>
-    <a class="item">O que é</a>
-    <a class="item">Tecnologia</a>
-    <a class="item">Cases</a>
-    <a class="item">Planos</a>
-    <a class="item">Contate-nos</a>
+    <a href="#home" class="active item">Início</a>
+    <a href="#what" class="item">O que é</a>
+    <a href="#tech" class="item">Tecnologia</a>
+    <a href="#cases" class="item">Cases</a>
+    <a href="#plans" class="item">Planos</a>
+    <a href="#contact" class="item">Contate-nos</a>
   </div>
 
 
   <!-- Page Contents -->
   <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
-
+    <div class="ui inverted vertical masthead center aligned segment" id="home">
       <div class="ui container">
         <div class="ui large secondary inverted pointing menu">
           <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-          <a class="active item">Início</a>
-          <a class="item">O que é</a>
-          <a class="item">Tecnologia</a>
-          <a class="item">Cases</a>
-          <a class="item">Planos</a>
+          <a href="#home" class="active item">Início</a>
+          <a href="#what" class="item">O que é</a>
+          <a href="#tech" class="item">Tecnologia</a>
+          <a href="#cases" class="item">Cases</a>
+          <a href="#plans" class="item">Planos</a>
           <div class="right item">
-            <a class="ui inverted button">Contate-nos</a>
+            <a href="#contact" class="ui inverted button">Contate-nos</a>
           </div>
         </div>
       </div>
@@ -244,7 +247,7 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe segment" id="multiplatform">
+    <div class="ui vertical stripe segment" id="tech">
       <h1 align="center">Multiplataforma</h1>
       <p align="center">Desenvolvemos nossos aplicativos para atender qualquer plataforma</p>
       <div class="ui middle aligned stackable grid container">
@@ -265,18 +268,42 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe segment" id="erps">
-      <h1 align="center">ERPs</h1>
-      <p align="center">Atualmente o mobicode suporta:</p>
+    <div class="ui vertical stripe segment" id="customization">
+      <h1 align="center">Customizavel</h1>
+      <p align="center">Nossa API de customização proporciona um desenvolvimento sem dor</p>
       <div class="ui middle aligned stackable grid container">
-        <div class="one column row">
-          <div class="column">
+        <div class="row">
+          <div class="two wide column">
+            <p align="center" style="font-size:15px;">ERPs disponíveis:</p>
             <div class="ui link card">
               <div class="image">
                 <img src="http://www.jyfconsultoria.com.br/images/datasul-partner.png">
               </div>
               <div class="content">
-                <a class="header" align="center">Datasul</a>
+                <p align="center">Datasul</p>
+              </div>
+            </div>
+          </div>
+          <div class="fourteen wide column">
+            <a>Veja nossa documentação para customização usando Datasul</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui vertical stripe segment" id="cases">
+      <h1 align="center">Cases</h1>
+      <p align="center">Veja alguns cases de sucesso que algumas empresas obtiveram usando <b>Mobicode</b></p>
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="ui link cards">
+            <div class="card">
+              <div class="image">
+                <img src="https://www.spmais.com.br/wp-content/uploads/2017/01/globo-usinagem.gif">
+              </div>
+              <div class="content">
+                <p align="center"><b>Globo Usinagem</b></p>
+                <p style="font-size: 14px;" align="center">Datasul</p>
               </div>
             </div>
           </div>
@@ -284,41 +311,69 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe segment" id="customization">
-      <h1 align="center">Customizavel</h1>
-      <p align="center">Nossa API de customização proporciona um desenvolvimento sem dor</p>
+    <div class="ui vertical stripe segment" id="plans">
+      <h1 align="center">Planos</h1>
+      <p align="center">Ficou interessado? Veja o plano que mais se adequa a sua empresa!</p>
       <div class="ui middle aligned stackable grid container">
-        <div class="three column row">
-
+        <div class="row">
+          <div class="ui link cards">
+            <div class="card">
+              <div class="content">
+                <p align="center">Simples</p>
+                <h1 class="price" align="center">R$590,00</h1>
+                <p align="center">mensais</p>
+                <p><b>Inclui:</b></p>
+                <ul>
+                  <li>Servidor mobicode</li>
+                  <li>2 aplicativos customizados</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p align="center">Desenvolvedor</p>
+                <h1 class="price" align="center">R$690,00</h1>
+                <p align="center">mensais</p>
+                <p><b>Inclui:</b></p>
+                <ul>
+                  <li>Servidor mobicode</li>
+                  <li>API de desenvolvimento de apps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <div class="ui inverted vertical footer segment">
+    <div class="ui inverted vertical footer segment" id="contact">
       <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
-          <div class="three wide column">
-            <h4 class="ui inverted header">About</h4>
-            <div class="ui inverted link list">
-              <a href="#" class="item">Sitemap</a>
-              <a href="#" class="item">Contact Us</a>
+          <div class="row">
+            <div class="eight wide column">
+              <h4 class="ui inverted header">Sobre</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Time</a>
+                <!-- <a href="#" class="item">Contact Us</a>
               <a href="#" class="item">Religious Ceremonies</a>
-              <a href="#" class="item">Gazebo Plans</a>
+              <a href="#" class="item">Gazebo Plans</a> -->
+              </div>
             </div>
-          </div>
-          <div class="three wide column">
-            <h4 class="ui inverted header">Services</h4>
-            <div class="ui inverted link list">
-              <a href="#" class="item">Banana Pre-Order</a>
+
+            <div class="eight wide column">
+              <h4 class="ui inverted header">Contato</h4>
+              <div class="ui inverted link list">
+                <!-- <a href="#" class="item">Banana Pre-Order</a>
               <a href="#" class="item">DNA FAQ</a>
               <a href="#" class="item">How To Access</a>
-              <a href="#" class="item">Favorite X-Men</a>
+              <a href="#" class="item">Favorite X-Men</a> -->
+              </div>
             </div>
           </div>
-          <div class="seven wide column">
-            <h4 class="ui inverted header">Footer Header</h4>
-            <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+          <div class="row">
+            <!-- <h4 class="ui inverted header">Footer Header</h4> -->
+            <p align="center">Construido com <i style="color:#ff0000;" class="heart icon"></i> em SJC</p>
           </div>
         </div>
       </div>
@@ -348,13 +403,13 @@
     });
   });
   $("#android").hover(function() {
-    $("#multiplatform").css("background-color", "#14a509");
+    $("#tech").css("background-color", "#14a509");
   });
   $("#apple").hover(function() {
-    $("#multiplatform").css("background-color", "#000");
+    $("#tech").css("background-color", "#000");
   });
   $("#windows").hover(function() {
-    $("#multiplatform").css("background-color", "#120587");
+    $("#tech").css("background-color", "#120587");
   });
 </script>
 
