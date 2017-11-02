@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Undo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/child.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-addon" id="spCodigo"><i class="glyphicon glyphicon-barcode"></i></span>
+            <input type="text" class="form-control" placeholder="Código da venda" id="inCodigo" aria-describedby="spCodigo" autofocus>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-danger btn-lg" onClick="estornarVenda();">Estornar</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    function estornarVenda(){
+      alert('Venda ' + $("#inCodigo").val() + ' estornada com sucesso!');
+    }
+  </script>
+</html>

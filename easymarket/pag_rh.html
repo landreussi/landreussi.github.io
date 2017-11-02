@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pag</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/child.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-addon" id="spMes"><i class="glyphicon glyphicon-calendar"></i> Mês de pagamento</span>
+            <input type="month" class="form-control" id="inMes" aria-describedby="spMes">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-success btn-lg" onClick="gerarPagamento();">Realizar Pagamento</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    function gerarPagamento(){
+      alert('Pagamento para ' + $("#inMes").val().split('-')[1] + '/' + $("#inMes").val().split('-')[0] + ' efetuado com sucesso!');
+    }
+  </script>
+</html>

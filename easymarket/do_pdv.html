@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Do</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/child.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="input-group">
+            <span class="input-group-addon" id="spCodigo"><i class="glyphicon glyphicon-barcode"></i></span>
+            <input type="text" class="form-control" placeholder="Código" id="inCodigo" onFocusOut="changeImg();" aria-describedby="spCodigo">
+          </div>
+        </div>
+      </div>
+      <div id="hidden" style="display: none;">
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+            <img class="img-responsive" align="center" id="imgPdv" src="img/potato_bread.jpg"></img>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <h2>Pão de batata</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <table class="table table-hover table-bordered table-responsive">
+          <thead>
+            <th>Cod.</th>
+            <th>Item</th>
+            <th>Qtd</th>
+            <th>Preço</th>
+          <thead>
+          <tbody>
+          </tbody>
+        <table>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-8">
+          <h2>Total: <b id="bTotal"></b></h2>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-success btn-lg" id="btnVenda" onClick="alert('Venda realizada! \nCódigo da venda: 3');" disabled>Realizar venda</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    function changeImg(){
+      $("#hidden").css('display', 'inline');
+      var qtd = prompt("Digite a quantidade");
+      $("tbody").append('<tr><td>1</td><td>Pão de batata</td><td>' + qtd.toString() +'</td><td>R$ 4.90</td></tr>');
+      $("#btnVenda").removeAttr("disabled");
+      $("#bTotal").append("R$ " + (qtd * 4.90).toString());
+    }
+  </script>
+</html>
